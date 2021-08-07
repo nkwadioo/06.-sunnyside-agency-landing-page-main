@@ -21,4 +21,53 @@ h1 {
 img {
   width: 100%;
   background-size: cover;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.landing {
+  margin-top: -1px;
+}
+.landing h1 {
+  position: absolute;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  top: 17%;
+  font-size: 40px;
+}
+.landing h1::after {
+  content: "";
+  background-image: url(./../images/icon-arrow-down.svg);
+  width: 36px;
+  height: 114px;
+  z-index: 5;
+  position: absolute;
+  left: calc(50% );
+  transform: translateX(-50%);
+  top: 164%;
+}
+.landing img {
+  margin-top: -60px;
+}
+
+nav {
+  background-color: #3ebfff;
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  padding: 1rem;
+}
+nav ul {
+  display: none;
+}
+nav #hamburger {
+  height: 16px;
+  width: 20px;
+  justify-self: end;
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */

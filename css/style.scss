@@ -1,5 +1,6 @@
 // Primary
 $Soft-red: hsl(7, 99%, 70%);
+$Soft-blue: #3ebfff;
 $Yellow: hsl(51, 100%, 49%);
 $Dark-desaturated-cyan: hsl(167, 40%, 24%); // (graphic design text)
 $Dark-blue: hsl(198, 62%, 26%); // (photography text)
@@ -36,4 +37,59 @@ h1 {
 img {
     width: 100%;
     background-size: cover;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.landing {
+    margin-top: -1px;
+    h1 {
+        position: absolute;
+        text-align: center;
+        letter-spacing: .5rem;
+        top: 17%;
+        font-size: 40px;
+
+        &::after {
+            content: "";
+            background-image: url(./../images/icon-arrow-down.svg);
+            width: 36px;
+            height: 114px;
+            z-index: 5;
+            position: absolute;
+            left: calc(50% );
+            transform: translateX(-50%);
+            top: 164%;
+        }
+    }
+
+    img {
+        margin-top: -60px;
+    }
+}
+
+nav {
+    background-color: $Soft-blue;
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    padding: 1rem;
+
+    ul {
+        display: none;
+    }
+    
+    #hamburger {
+        height: 16px;
+        width: 20px;
+        justify-self: end;
+        align-self: center;
+    }
+
 }
