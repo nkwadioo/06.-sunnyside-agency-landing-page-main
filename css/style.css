@@ -38,8 +38,12 @@ header {
   position: absolute;
   text-align: center;
   letter-spacing: 0.5rem;
-  top: 17%;
+  top: 120px;
   font-size: 40px;
+  max-width: 13ch;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .landing h1::after {
   content: "";
@@ -53,7 +57,7 @@ header {
   top: 164%;
 }
 .landing img {
-  margin-top: -60px;
+  height: 463px;
 }
 
 nav {
