@@ -9,7 +9,7 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, button {
   font-family: "Fraunces", serif;
 }
 
@@ -58,6 +58,7 @@ header {
 }
 .landing img {
   height: 463px;
+  margin-bottom: -3px;
 }
 
 nav {
@@ -74,4 +75,33 @@ nav #hamburger {
   width: 20px;
   justify-self: end;
   align-self: center;
+}
+
+.content {
+  text-align: center;
+  display: grid;
+  gap: 1.5rem;
+}
+.content[role=article] {
+  padding: 2rem;
+}
+.content h2 {
+  width: 13ch;
+  margin: auto;
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  word-spacing: 5px;
+}
+.content button {
+  background: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem;
+  border: none;
+  margin: auto;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 800;
 }/*# sourceMappingURL=style.css.map */
