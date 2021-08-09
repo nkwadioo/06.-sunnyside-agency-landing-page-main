@@ -183,12 +183,16 @@ nav #hamburger {
   color: #19536b;
 }
 
+.testimonials {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .testimonials h3 {
   color: #a7abae;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 4rem;
 }
 
 .testimonials .personInfo {
@@ -226,5 +230,56 @@ nav #hamburger {
 
 .testimonials .imageWrapper img {
   border-radius: 50%;
+}
+
+footer {
+  background-color: rgba(69, 140, 126, 0.5);
+}
+
+footer .images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+footer .footer-icon {
+  padding-top: 4rem;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+footer ul {
+  padding-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer ul li {
+  letter-spacing: 1px;
+  list-style: none;
+  color: #458c7e;
+}
+
+footer .icons {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .icons img {
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */

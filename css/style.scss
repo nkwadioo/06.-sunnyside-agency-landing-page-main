@@ -196,12 +196,13 @@ nav {
 }
 
 .testimonials {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     h3 {
         color: $Grayish-blue;
         letter-spacing: 3px;
         text-transform: uppercase;
         text-align: center;
-        padding-top: 4rem;
     }
 
     .personInfo {
@@ -239,6 +240,44 @@ nav {
 
         img {
             border-radius: 50%;
+        }
+    }
+}
+
+footer {
+    background-color: fade-out($Dark-moderate-cyan, .5);
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-icon {
+        padding-top: 4rem;
+        width: 200px;
+        display: block;
+        margin: auto;
+    }
+
+    ul {
+        padding-top: 3rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        li {
+            letter-spacing: 1px;
+            list-style: none;
+            color: $Dark-moderate-cyan;
+        }
+    }
+    .icons {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        img {
+            width: 20px;
         }
     }
 }
