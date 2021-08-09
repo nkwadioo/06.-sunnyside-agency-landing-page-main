@@ -365,8 +365,98 @@ footer {
         }
     }
 
+    .testimonials .personInfo p  {
+        max-width: 65ch;
+        margin: auto;
+    }
+
     footer .images {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+}
+
+@media (min-width: 1020px) {
+
+    #hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        li {
+            padding: 8px 22px;
+            color: $White;
+            font-size: 0.8rem;
+
+            &.active, &:hover {
+                cursor: pointer;
+                background-color: fade-out($White, .5);
+                color: $White;
+                font-size: 0.8rem !important;
+            }
+
+            &.active, &.active:hover {
+                color: black;
+                background-color: $White !important;
+            }
+
+        }
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &:first-child {
+            img {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            div {
+                grid-column: 1;
+            }
+        }
+    }
+    .content {
+        gap: 1rem;
+        &[role=article] {
+
+            text-align: inherit;
+            padding: 10rem 0;
+            align-content: center;
+            
+            p {
+                max-width: 57ch;
+                margin-left: 4rem;
+                line-height: 25px;
+            }
+        }
+
+        h2 {
+            margin-left: 6rem;
+            text-align: left;
+            max-width: 16ch;
+        }
+
+        button {
+            margin-left: 6rem;
+        }
+    }
+
+    .image-wrapper {
+        min-height: 520px;
+    }
+    
+    .people {
+        display: flex;
+        justify-content: space-around;
+
+        &.personInfo {
+            max-width: 440px;
+        }
+    }
 }

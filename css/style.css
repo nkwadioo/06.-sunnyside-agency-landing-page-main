@@ -359,9 +359,96 @@ footer .icons img {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  .testimonials .personInfo p {
+    max-width: 65ch;
+    margin: auto;
+  }
   footer .images {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1020px) {
+  #hamburger {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav ul li {
+    padding: 8px 22px;
+    color: white;
+    font-size: 0.8rem;
+  }
+  nav ul li.active, nav ul li:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 0.8rem !important;
+  }
+  nav ul li.active, nav ul li.active:hover {
+    color: black;
+    background-color: white !important;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  section:first-child img {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  section:first-child div {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .content {
+    gap: 1rem;
+  }
+  .content[role=article] {
+    text-align: inherit;
+    padding: 10rem 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .content[role=article] p {
+    max-width: 57ch;
+    margin-left: 4rem;
+    line-height: 25px;
+  }
+  .content h2 {
+    margin-left: 6rem;
+    text-align: left;
+    max-width: 16ch;
+  }
+  .content button {
+    margin-left: 6rem;
+  }
+  .image-wrapper {
+    min-height: 520px;
+  }
+  .people {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .people.personInfo {
+    max-width: 440px;
   }
 }
 /*# sourceMappingURL=style.css.map */
