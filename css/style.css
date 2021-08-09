@@ -2,15 +2,17 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 h1, h2, h3, h4, h5, button {
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
+  color: #23303e;
 }
 
 h1 {
@@ -21,11 +23,15 @@ h1 {
 img {
   width: 100%;
   background-size: cover;
+  height: 100%;
 }
 
 header {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -34,6 +40,7 @@ header {
 .landing {
   margin-top: -1px;
 }
+
 .landing h1 {
   position: absolute;
   text-align: center;
@@ -43,8 +50,10 @@ header {
   max-width: 13ch;
   margin: 0 auto;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
+
 .landing h1::after {
   content: "";
   background-image: url(./../images/icon-arrow-down.svg);
@@ -52,10 +61,12 @@ header {
   height: 114px;
   z-index: 5;
   position: absolute;
-  left: calc(50% );
-  transform: translateX(-50%);
+  left: calc(50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 164%;
 }
+
 .landing img {
   height: 463px;
   margin-bottom: -3px;
@@ -63,36 +74,34 @@ header {
 
 nav {
   background-color: #3ebfff;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 135px 1fr;
+  -ms-grid-columns: 135px 1fr;
+      grid-template-columns: 135px 1fr;
   padding: 1rem;
 }
+
 nav ul {
   display: none;
 }
+
 nav #hamburger {
   height: 16px;
   width: 20px;
-  justify-self: end;
-  align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .content {
   text-align: center;
+  display: -ms-grid;
   display: grid;
   gap: 1.5rem;
 }
-.content[role=article] {
-  padding: 2rem;
-}
-.content h2 {
-  width: 13ch;
-  margin: auto;
-  text-align: center;
-  font-weight: 900;
-  font-size: 30px;
-  word-spacing: 5px;
-}
+
 .content button {
   background: transparent;
   width: -webkit-fit-content;
@@ -104,4 +113,73 @@ nav #hamburger {
   text-transform: uppercase;
   letter-spacing: 1.4px;
   font-weight: 800;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.content[role=article] {
+  padding: 3rem 0;
+}
+
+.content[role=article] button {
+  position: relative;
+}
+
+.content[role=article] button::after {
+  content: '';
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  border-radius: 43px;
+  z-index: -1;
+}
+
+.content[role=article].transform button::after {
+  background-color: rgba(250, 212, 0, 0.5);
+}
+
+.content[role=article].stand-out button::after {
+  background-color: rgba(254, 120, 103, 0.5);
+}
+
+.content[role=article] p {
+  color: #818498;
+  padding: 0 31px;
+  letter-spacing: 0.8px;
+}
+
+.content h2 {
+  width: 13ch;
+  margin: auto;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  word-spacing: 5px;
+}
+
+.content h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+
+.content[role=region] {
+  position: relative;
+}
+
+.content[role=region] .sub-article {
+  position: absolute;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 2.3rem;
+  padding: 4.4rem 1.3rem;
+}
+
+.content[role=region] .graphic-design h3, .content[role=region] .graphic-design p {
+  color: #25564b;
+}
+
+.content[role=region] .photography h3, .content[role=region] .photography p {
+  color: #19536b;
+}
+/*# sourceMappingURL=style.css.map */
