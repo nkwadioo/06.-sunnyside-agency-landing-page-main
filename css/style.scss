@@ -194,3 +194,51 @@ nav {
 
     
 }
+
+.testimonials {
+    h3 {
+        color: $Grayish-blue;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .personInfo {
+        display: grid;
+        gap: 2rem;
+        padding: 3.4rem 2.2rem 0;
+        text-align: center;
+        word-spacing: 1.1px;
+        
+        p {
+            color: $Very-dark-grayish-blue;
+        }
+
+    }
+    
+    .footer{
+        display: grid;
+        gap: .5rem;
+        h4 {
+            color: black;
+            font-weight: 900;
+        }
+
+        
+    
+        small {
+            color: $Dark-grayish-blue;
+        }
+        
+    }
+
+    .imageWrapper {
+        width: 80px;
+        margin: auto;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
