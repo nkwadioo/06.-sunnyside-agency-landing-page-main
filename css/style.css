@@ -43,16 +43,16 @@ header {
 
 .landing {
   margin-top: -1px;
+  background-color: #3ebfff;
 }
 
 .landing h1 {
   position: absolute;
   text-align: center;
-  letter-spacing: 0.5rem;
-  top: 120px;
+  letter-spacing: 0.4rem;
+  top: 135px;
   font-size: 40px;
-  max-width: 13ch;
-  margin: 0 auto;
+  width: 100%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -68,12 +68,13 @@ header {
   left: calc(50%);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 164%;
+  top: 150px;
 }
 
 .landing img {
-  height: 463px;
   margin-bottom: -3px;
+  display: block;
+  margin: auto;
 }
 
 nav {
@@ -337,5 +338,30 @@ footer .icons {
 
 footer .icons img {
   width: 20px;
+}
+
+@media (min-width: 720px) {
+  .landing h1 {
+    top: 8rem;
+  }
+  .content {
+    gap: 3.5rem;
+  }
+  .content[role=article] {
+    padding: 5rem 0;
+  }
+  .content p {
+    max-width: 65ch;
+    margin: auto;
+  }
+  .content[role=region] .sub-article {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  footer .images {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

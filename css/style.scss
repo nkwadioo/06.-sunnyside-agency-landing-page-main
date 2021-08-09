@@ -56,14 +56,14 @@ header {
 
 .landing {
     margin-top: -1px;
+    background-color: $Soft-blue;
     h1 {
         position: absolute;
         text-align: center;
-        letter-spacing: 0.5rem;
-        top: 120px;
+        letter-spacing: 0.4rem;
+        top: 135px;
         font-size: 40px;
-        max-width: 13ch;
-        margin: 0 auto;
+        width: 100%;
         left: 50%;
         transform: translateX(-50%);
 
@@ -76,13 +76,16 @@ header {
             position: absolute;
             left: calc(50% );
             transform: translateX(-50%);
-            top: 164%;
+            top: 150px;
         }
     }
 
     img {
-        height: 463px;
+        // height: 463px;
         margin-bottom: -3px;
+        // max-width: 550px;
+        display: block;
+        margin: auto;
     }
 }
 
@@ -329,4 +332,41 @@ footer {
             width: 20px;
         }
     }
+}
+
+// @media (min-width: 550px) {
+//     .landing h1 {
+//         font-size: 4rem;
+//         top: 70px;
+//     }
+// }
+
+@media (min-width: 720px) {
+    .landing h1 {
+        top:  8rem;
+    }   
+
+    
+
+    .content{
+        gap: 3.5rem;
+        &[role=article] {
+            padding: 5rem 0;
+        }
+
+        p {
+            max-width: 65ch;
+            margin: auto;
+        }
+
+        &[role=region] .sub-article {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    footer .images {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
