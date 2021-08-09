@@ -26,6 +26,10 @@ img {
   height: 100%;
 }
 
+ul > li {
+  list-style: none;
+}
+
 header {
   display: -ms-grid;
   display: grid;
@@ -79,10 +83,7 @@ nav {
   -ms-grid-columns: 135px 1fr;
       grid-template-columns: 135px 1fr;
   padding: 1rem;
-}
-
-nav ul {
-  display: none;
+  position: relative;
 }
 
 nav #hamburger {
@@ -93,6 +94,59 @@ nav #hamburger {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+nav ul {
+  display: none;
+}
+
+nav.active ul {
+  position: absolute;
+  width: calc(100% - 2rem);
+  background: white;
+  right: 1rem;
+  top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 4rem 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 420px;
+}
+
+nav.active ul::before {
+  content: '';
+  position: absolute;
+  top: -19px;
+  right: -2.3px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav li {
+  padding: 15px 23px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 25px;
+  color: #818498;
+}
+
+nav li:hover, nav li.active {
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  background-color: #fad400;
+  color: black;
 }
 
 .content {
@@ -149,7 +203,7 @@ nav #hamburger {
 }
 
 .content h2 {
-  width: 13ch;
+  max-width: 13ch;
   margin: auto;
   text-align: center;
   font-weight: 900;
@@ -255,6 +309,8 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

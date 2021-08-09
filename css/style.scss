@@ -41,6 +41,10 @@ img {
     height: 100%;
 }
 
+ul > li {
+    list-style: none;
+}
+
 header {
     display: grid;
     grid-template-columns: 1fr;
@@ -87,16 +91,60 @@ nav {
     display: grid;
     grid-template-columns: 135px 1fr;
     padding: 1rem;
+    position: relative;
 
-    ul {
-        display: none;
-    }
     
     #hamburger {
         height: 16px;
         width: 20px;
         justify-self: end;
         align-self: center;
+    }
+
+    ul {
+        display: none;
+    }
+
+    &.active {
+        ul {
+            position: absolute;
+            width: calc(100% - 2rem);
+            background: $White;
+            right: 1rem;
+            top: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 2rem 4rem 3rem;
+            align-items: center;
+            max-width: 420px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -19px;
+                right: -2.3px;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid $White;
+                transform: rotate( 45deg );
+            }
+        }
+
+    }
+
+    li {
+        padding: 15px 23px;
+        width: fit-content;
+        border-radius: 25px;
+        color: $Dark-grayish-blue;
+    }
+
+    li:hover, li.active {
+        text-transform: uppercase;
+        font-family: 'Fraunces', serif;
+        background-color: $Yellow;
+        color: black;
     }
 
 }
@@ -155,7 +203,7 @@ nav {
         }
     }
     h2 {
-        width: 13ch;
+        max-width: 13ch;
         margin: auto;
         text-align: center;
         font-weight: 900;
@@ -261,6 +309,7 @@ footer {
     ul {
         padding-top: 3rem;
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
         li {
