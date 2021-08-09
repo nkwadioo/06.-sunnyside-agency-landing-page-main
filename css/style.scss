@@ -137,6 +137,7 @@ nav {
     }
 
     li {
+        cursor: pointer;
         padding: 15px 23px;
         width: fit-content;
         border-radius: 25px;
@@ -158,6 +159,7 @@ nav {
     gap: 1.5rem;
 
     button {
+        cursor: pointer;
         background: transparent;
         width: fit-content;
         padding: 0.2rem;
@@ -315,10 +317,16 @@ footer {
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
+
         li {
+            cursor: pointer;
             letter-spacing: 1px;
             list-style: none;
             color: $Dark-moderate-cyan;
+
+            &:hover {
+                color: $White;
+            }
         }
     }
     .icons {
@@ -330,6 +338,11 @@ footer {
 
         img {
             width: 20px;
+            cursor: pointer;
+
+            &:hover {
+                color: $White;
+            }
         }
     }
 }
@@ -428,7 +441,7 @@ footer {
             text-align: inherit;
             padding: 10rem 0;
             align-content: center;
-            
+
             p {
                 max-width: 57ch;
                 margin-left: 4rem;

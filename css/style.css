@@ -135,6 +135,7 @@ nav.active ul::before {
 }
 
 nav li {
+  cursor: pointer;
   padding: 15px 23px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -158,6 +159,7 @@ nav li:hover, nav li.active {
 }
 
 .content button {
+  cursor: pointer;
   background: transparent;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -319,9 +321,14 @@ footer ul {
 }
 
 footer ul li {
+  cursor: pointer;
   letter-spacing: 1px;
   list-style: none;
   color: #458c7e;
+}
+
+footer ul li:hover {
+  color: white;
 }
 
 footer .icons {
@@ -338,6 +345,11 @@ footer .icons {
 
 footer .icons img {
   width: 20px;
+  cursor: pointer;
+}
+
+footer .icons img:hover {
+  color: white;
 }
 
 @media (min-width: 720px) {
