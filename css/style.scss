@@ -341,7 +341,7 @@ footer {
             cursor: pointer;
 
             &:hover {
-                color: $White;
+                filter: brightness(6.5);
             }
         }
     }
